@@ -13,7 +13,7 @@ ORDER BY producto ASC;
 -- 2) Filtrado crítico
 -- Pregunta de negocio: ¿qué ventas de alto valor (precio unitario > 500)
 --   se realizaron en Colombia?
-SELECT *
+SELECT id_venta, producto, categoria, precio_unitario, cantidad, fecha
 FROM ventas_tecnologia
 WHERE pais = 'Colombia'
   AND precio_unitario > 500;
@@ -21,7 +21,7 @@ WHERE pais = 'Colombia'
 -- 3) Búsqueda de nulos
 -- Pregunta de negocio: ¿hay ventas cargadas sin categoría?
 --   (se usa IS NULL, nunca = NULL)
-SELECT *
+SELECT id_venta, producto, categoria, precio_unitario, cantidad, fecha, pais
 FROM ventas_tecnologia
 WHERE categoria IS NULL;
 

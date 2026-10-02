@@ -40,6 +40,7 @@ Además se detectaron **2 ventas sin categoría** (webcam y tablet) que habría 
 ## Buenas prácticas aplicadas
 
 - Palabras clave de SQL en MAYÚSCULAS.
+- Sin `SELECT *`: cada consulta pide solo las columnas que necesita.
 - `IS NULL` en lugar de `= NULL`.
 - `HAVING` para filtrar agregaciones (no `WHERE`).
 - Toda columna no agregada del `SELECT` está en el `GROUP BY`.
